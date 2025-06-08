@@ -398,7 +398,7 @@ footer a i:hover {
         }
 
     #menu-toggle:checked ~ .list-menu {
-        height: 220px;
+        height: 180px;
         padding: 25px;
     }
 
