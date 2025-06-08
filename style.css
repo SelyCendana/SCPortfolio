@@ -341,6 +341,15 @@ footer a i:hover {
     header {
         padding: 0 25px;
     }
+    
+    body {
+        overflow-y: hidden;
+    }
+    
+    html {
+        overflow-x: hidden;
+        overflow-y: visible;
+    }
 
     .menu-icon {
         display: block;
@@ -388,15 +397,16 @@ footer a i:hover {
 
     .list-menu li ul.dropdown li{
         background: none;
-        width: 100px;
+        width: 90px;
         top: -40px;
-        left: 100px;
+        left: 75px;
+        padding: 0px 4px;
     }
 
     .list-menu li:hover ul.dropdown{
         display: flex;
         }
-
+    
     #menu-toggle:checked ~ .list-menu {
         height: 180px;
         padding: 25px;
