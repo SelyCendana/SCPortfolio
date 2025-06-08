@@ -578,12 +578,12 @@ ul.contact {
     }
 
     .right .img{
-        left: 45px;
+        left: 25px;
     }
 
     .right .contact{
         font-size: 15px;
-        left: 40px;
+        left: 20px;
         padding: 0px 10px;
     }
 
@@ -592,9 +592,8 @@ ul.contact {
     }
     
     .page2 {
-        top: 300px;
-        height: 930px;
-        
+        top: 220px;
+        height: 980px;
     }
 
     .text3 {
@@ -624,26 +623,26 @@ ul.contact {
 
     .me{
         width: 100px;
-        top: 410px;
+        top: 435px;
         left: 180px;
     }
 
     .rectangle{
         width: 250px;
-        top: 340px;
+        top: 365px;
         left: 230px;
     }
 
     .GTB {
         font-size: 15px;
-        top: 473px;
+        top: 503px;
         left: 270px;
     }
 
     .page3 {
-        top: 300px;
+        top: 240px;
         width: 750px;
-        height: 620px ;
+        height: 560px ;
     }
 
     .TS {
