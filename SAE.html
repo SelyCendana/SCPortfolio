@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="SAE.css" />
+
+    <!-- FONT FAMILY -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Jua&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- IMPORT BOX ICONS -->
+	  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+
+    <header>
+        <h2 class="logo">Sely<span>Cendana</span></h2>
+
+        <!-- MOBILE SCREEN -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class='bx bx-menu-alt-right'></i>
+            <i class='bx bx-x'></i>
+        </label>
+        <!-- END MOBILE SCREEN -->
+
+        <ul class="list-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" >About </a></li>
+            <li><a class="active" href="project.html">Project &#x25BE</a>
+            <ul class="dropdown">
+              <li><a href="GD.html">Design Graphic</a></li>
+              <li><a href="AD.html">Art Design</a></li>
+              <li><a href="#">Animation & Editing</a></li>
+             </ul></li>
+        </ul>
+    </header>
+
+    <main>
+      <div class="page1">
+        <section class="video-container" id="video1">
+            <video class="video" src="Video1.mp4" muted loop playsinline preload="metadata" width="100%">
+         </section>
+
+         <section class="Photo" id="Phone">
+          <img class="photo" src="phone1.png" width="100%">
+       </section>
+
+          <h4 class="text1">Animation</h4>
+          <h4 class="text2">And</h4>
+          <h4 class="text3">Editing</h4>
+    </div>
+    
+    <div class="page2">
+        <section class="video-contain" id="video3">
+          <video class="pideo" controls src="Video3.mp4" width="100%">
+        </section>
+
+        <h5 class="text4">Apa Itu Cemara?</h5>
+          <p class="text5">
+            Video ini adalah hasil akhir dari tugas sekolah saya saat membuat film pendek sebagai video editor.
+            Warna dan musik yang di gunakan pada video mengekspresikan situasi yang dialami oleh tokoh tokoh dalam cerita. 
+            Film ini mengekspresikan kegelisahan yang biasa dialami oleh anak remaja berprestasi.
+            Film ini mendapatkan penghargaan dari sekolah karena kisahnya yang mengharukan.</p>
+          <p class="text6">@weare.dkv12</p>
+    </div>
+  </main>
+
+  <footer>
+    <ul class="contact">
+      <li>WA : 0882017908728 </li>
+      <li>Gmail : selycendana35@gmail.com </li>
+    </ul>
+  </footer>
+ 
+    <script>document.addEventListener('DOMContentLoaded', () => {
+        // Select all video containers on the page
+        const videoContainers = document.querySelectorAll('.video-container');
+    
+        // Iterate over each video container to apply the hover effect
+        videoContainers.forEach(container => {
+            const video = container.querySelector('.video');
+    
+            // Function to play the video
+            function playVideo() {
+                // Attempt to play the video.
+                // .play() returns a Promise, so we use .catch() to handle cases
+                // where autoplay might be blocked (e.g., if 'muted' is removed).
+                video.play().catch(error => {
+                    console.warn("Autoplay prevented or failed:", error);
+                    // Optionally, you could show a play button here if autoplay fails
+                });
+                overlay.style.opacity = '0'; // Hide the overlay
+            }
+    
+            // Function to pause the video and reset its time
+            function pauseVideo() {
+                video.pause();
+                video.currentTime = 0; // Reset video to the beginning
+                overlay.style.opacity = '1'; // Show the overlay
+            }
+    
+            // Add event listeners for mouse interaction
+            container.addEventListener('mouseenter', playVideo); // When mouse enters the container
+            container.addEventListener('mouseleave', pauseVideo); // When mouse leaves the container
+    
+            // --- Optional: Enhance for touch devices ---
+            // Note: 'hover' doesn't directly translate to touch.
+            // A common approach for touch is to play/pause on tap.
+            // If you want a "tap to play/pause" on touch, you might modify this.
+            // For simplicity, I'm keeping it close to the hover logic for now,
+            // but real-world touch interaction often requires different UX.
+    
+            // For touch devices, you might want to consider what happens on the first tap.
+            // Here, a tap will play, and another tap *might* pause, depending on timing.
+            let touchTimeout;
+            container.addEventListener('touchstart', (e) => {
+                // Prevent default behavior to avoid issues like scrolling on tap
+                // e.preventDefault(); // Uncomment if you experience unwanted scrolling
+                playVideo();
+                // Optional: Pause after a short delay on touch to mimic a "peek"
+                clearTimeout(touchTimeout);
+                touchTimeout = setTimeout(pauseVideo, 3000); // Pause after 3 seconds
+            });
+    
+            container.addEventListener('touchend', (e) => {
+                 // clearTimeout(touchTimeout); // Uncomment if you want video to play until next tap
+            });
+    
+            // If you want the video to stay played on touch after a single tap,
+            // you would remove the touchend listener or modify the touchTimeout.
+        });
+    });</script>
+  </body>
+</html>
