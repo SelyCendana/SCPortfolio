@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="project.css" />
+        <!-- FONT FAMILY -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Itim&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- IMPORT BOX ICONS -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <header>
+            <h2 class="logo">Sely<span>Cendana</span></h2>
+    
+            <!-- MOBILE SCREEN -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">
+                <i class='bx bx-menu-alt-right'></i>
+                <i class='bx bx-x'></i>
+            </label>
+            <!-- END MOBILE SCREEN -->
+    
+          
+            <ul class="list-menu">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About </a></li>
+              <li><a href="#" class="active">Project &#x25BE</a>
+              <ul class="dropdown">
+                <li><a href="GD.html">Graphic Design</a></li>
+                <li><a href="AD.html">Art Design</a></li>
+                <li><a href="SAE.html">Animation & Editing</a></li>
+               </ul></li>
+          </ul>
+      </header>
+        <main>
+            <h2 class="t">Projects</h2>
+
+            <div class="left">
+                <img class="GD" src="GD.jpg" id="img1"></img>
+                <a class="J1"  href="GD.html">Design Graphic</a>
+            </div>
+
+            <div class="middle">
+                <img class="AD" src="AD.jpg"id="img2"></img>
+                <a class="J2"  href="AD.html">Art Design</a>
+            </div>
+
+            
+                <div class="video1" id="videoContainer">
+                <a href="SAE.html"><video class="AE" id="myVideo" src="AAE.mp4" muted loop playsinline preload="metadata" width="100%" ></a></div>
+            <div class="right">
+                <a class="J3" href="SAE.html">Animation & Editing</a>
+            </div>
+
+        </main>
+
+        <script>
+const videoContainer = document.getElementById('videoContainer');
+  const video = document.getElementById('myVideo');
+
+  // Add event listener for when the mouse enters the container
+  videoContainer.addEventListener('mouseenter', function() {
+    video.play()
+      .catch(error => {
+        console.warn("Video playback prevented, likely due to browser autoplay policies. User may need to interact first.", error);
+        // You could add UI here to prompt the user to click to play
+      });
+  });
+
+  // Add event listener for when the mouse leaves the container
+  videoContainer.addEventListener('mouseleave', function() {
+    video.pause();
+    video.currentTime = 0; // Rewind to the beginning
+  });
+
+  // Optional: You might want to make sure it's paused initially if not set to autoplay
+  // Though with the mouseleave event, it will rewind anyway.
+  video.pause();</script>
+
+        <script>
+          document.addEventListener('DOMContentLoaded', function() {
+    // Get the image and video elements by their IDs
+    const imageLinkOneDiv = document.getElementById('img1');
+    const imageLinkTwoDiv = document.getElementById('img2');
+    const videoLinkDiv = document.getElementById('video');
+
+    // Add a click event listener to the first image container
+    if (imageLinkOneDiv) {
+        imageLinkOneDiv.addEventListener('click', function() {
+            // Redirect to a specific URL when the first image is clicked
+            window.location.href = 'GD.html';
+        });
+    }
+
+    // Add a click event listener to the second image container
+    if (imageLinkTwoDiv) {
+        imageLinkTwoDiv.addEventListener('click', function() {
+            // Redirect to a different URL when the second image is clicked
+            window.location.href = 'AD.html';
+        });
+    }
+
+    // Add a click event listener to the video container
+    if (videoLinkDiv) {
+        videoLinkDiv.addEventListener('click', function() {
+            // Redirect to a different URL when the video is clicked
+            window.location.href = 'AE.html';
+        });
+    }
+});</script>
+    </body>
+</html>
