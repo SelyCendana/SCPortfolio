@@ -359,8 +359,13 @@ ul.contact {
         padding: 0 25px;
     }
     
-    body, html {
+    body {
+        overflow-y: hidden;
+    }
+    
+    html {
         overflow-x: hidden;
+        overflow-y: visible;
     }
 
     .menu-icon {
@@ -503,14 +508,18 @@ ul.contact {
     }
 
     footer {
-        height: 50px;
+        height: 30px;
+        padding: 70px 0px;
+        background-color: white;
+
     }
 
     ul.contact {
-        left: 5px;
-        top: 107px;
+        left: 0px;
+        top: 39px;
         font-size: 10px;
         gap: 80px ;
+        z-index: 1;
      }
 }
 /* END RESPONSIVE */
