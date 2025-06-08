@@ -498,7 +498,7 @@ ul.contact {
     }
     
     body {
-        overflow-y: hidden;
+        overflow: hidden;
     }
     
     html {
