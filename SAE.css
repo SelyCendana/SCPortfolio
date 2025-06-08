@@ -414,9 +414,10 @@ ul.contact {
 
     .list-menu li ul.dropdown li{
         background: none;
-        width: 100px;
+        width: 90px;
         top: -40px;
-        left: 100px;
+        left: 75px;
+        padding: 0px 4px;
     }
 
     .list-menu li:hover ul.dropdown{
@@ -518,7 +519,7 @@ ul.contact {
         left: 0px;
         top: 39px;
         font-size: 10px;
-        gap: 80px ;
+        gap: 150px ;
         z-index: 1;
      }
 }
