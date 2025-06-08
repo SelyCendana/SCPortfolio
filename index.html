@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- IMPORT BOX ICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <header>
+        <h2 class="logo">Sely<span>Cendana</span></h2>
+    
+        <!-- MOBILE SCREEN -->
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon">
+            <i class='bx bx-menu-alt-right'></i>
+            <i class='bx bx-x'></i>
+        </label>
+        <!-- END MOBILE SCREEN -->
+
+      
+        <ul class="list-menu">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="about.html">About </a></li>
+          <li><a href="project.html" >Project &#x25BE</a>
+          <ul class="dropdown">
+            <li><a href="GD.html"> Graphic Design</a></li>
+            <li><a href="AD.html">Art Design</a></li>
+            <li><a href="SAE.html">Animation & Editing</a></li>
+           </ul></li>
+      </ul>
+    </header>
+
+    <main>
+        <div class="left">
+            <h2 class="hello-text">Hello, I'm</h2>
+            <h1 class="name-text">SelyCendana👋</h1>
+            <h2 class="role-text">
+                <span>Graphic Designer</span>
+                <span>Artistik Designer</span>
+                <span>Animator & Editor</span>
+            </h2>
+
+            <div class="list-button">
+                <button id="downloadButton" class="download-cv">Download CV</button>
+               <button id="myButton" href="https://wa.me/62882017908728" class="contact-me">Contact Me </button> 
+            </div>
+        </div>
+
+        <section class="right">
+            <img class="blob-img" src="blob.png">
+            <img class="rocket-img" src="rocket.png">
+        </section>
+    </main>
+
+    <footer>
+        <a href="mailto:selycendana35@gmail.com"><i class='bx bxl-gmail'></i></a>
+        <a href="https://www.linkedin.com/in/sely-cendana-298b0a2a7"><i class='bx bxl-linkedin' ></i></a>
+        <a href="https://www.instagram.com/phoen_881?igsh=MTZtNjJ1ZXZhbWEycw=="><i class='bx bxl-instagram' ></i></a>
+    </footer>
+<script>
+ function connectButtonToLink(buttonId, linkUrl) {
+      const button = document.getElementById(buttonId);
+
+      if (!button) {
+        console.error(`Button with ID '${buttonId}' not found.`);
+        return;
+      }
+
+      button.addEventListener('click', function() {
+        window.location.href = linkUrl;
+      });
+    }
+
+    connectButtonToLink('myButton', 'https://wa.me/628820017908728');
+</script>
+
+<script>
+function downloadFile(buttonId, fileUrl, fileName) {
+    const button = document.getElementById(buttonId);
+
+    if (!button) {
+      console.error(`Button with ID '${buttonId}' not found.`);
+      return;
+    }
+
+    button.addEventListener('click', function() {
+      const link = document.createElement('a');
+      link.href = fileUrl;
+      link.download = fileName; // Specify the download file name
+      document.body.appendChild(link); // Required for Firefox
+      link.click();
+      document.body.removeChild(link); // Clean up
+    });
+  }
+
+  // Example: Replace with your actual file URL and desired file name
+  downloadFile('downloadButton', 'Resume.pdf', 'downloaded_CV.PDF');
+</script>
+</body>
+
+
+</html>
