@@ -631,7 +631,7 @@ ul.contact {
 
     .CD2{
         width: 300px;
-        left: 160px;
+        left: 170px;
         top: 300px;
         animation: showUp 0.7s forwards;
         animation-delay: 1.8s;
@@ -640,7 +640,7 @@ ul.contact {
     
     .CD3{
         width: 300px;
-        left: -160px;
+        left: -140px;
         top: 550px;
         animation: showUp 0.7s forwards;
         animation-delay: 1.8s;
@@ -648,7 +648,7 @@ ul.contact {
     }
 
     .page3{
-        height: 900px;
+        height: 850px;
     }
 
     .tj2{
