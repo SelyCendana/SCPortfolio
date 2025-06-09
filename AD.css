@@ -529,7 +529,7 @@ ul.contact {
         width: 90px;
         top: -40px;
         left: 75px;
-        padding: 0px px;
+        padding: 0px 4px;
     }
 
     .list-menu li:hover ul.dropdown{
