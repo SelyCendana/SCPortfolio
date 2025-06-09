@@ -118,7 +118,7 @@ header {
 .t {
     position: relative;
     color: #868686;
-    top: 190px;
+    top: 140px;
     left: 155px;
     font-size: 30px;
     width: 200px;
@@ -149,7 +149,7 @@ header {
     position: relative;
     width: 280px;
     left: -310px;
-    top: 265px;
+    top: 215px;
     z-index: 1;
 }
 
@@ -164,7 +164,7 @@ header {
     position: relative;
     width: 280px;
     left: 80px;
-    top: 77px;
+    top: 27px;
 }
 
 .AD:hover {
@@ -177,7 +177,7 @@ header {
     position: relative;
     width: 360px;
     left: 455px;
-    top: -120px;
+    top: -170px;
     animation: showUp 0.7s forwards;
     animation-delay: 1.7s;
     opacity: 0; 
@@ -199,7 +199,7 @@ li:hover{
     color: #B3B3B3;
     font-weight: 700;
     font-size: 20px;
-    top: 325px;
+    top: 275px;
     left: -530px;
     text-decoration: none;
 }
@@ -209,7 +209,7 @@ li:hover{
     color: #B3B3B3;
     font-weight: 700;
     font-size: 20px;
-    top: 140px;
+    top: 90px;
     left: -120px;
     text-decoration: none;
 }
@@ -219,7 +219,7 @@ li:hover{
     color: #B3B3B3;
     font-weight: 700;
     font-size: 20px;
-    top: -100px;
+    top: -150px;
     left: 530px;
     text-decoration: none;
 }
