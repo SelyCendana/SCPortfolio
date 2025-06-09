@@ -578,12 +578,12 @@ ul.contact {
     }
 
     .right .img{
-        left: 15px;
+        left: 12px;
     }
 
     .right .contact{
         font-size: 15px;
-        left: 10px;
+        left: 7px;
         padding: 0px 10px;
     }
 
@@ -671,7 +671,7 @@ ul.contact {
         left: 170px;
     }
 
-    .S1, .s2, .s3, .s4, .s5, .s6, .s7{
+    .s1, .s2, .s3, .s4, .s5, .s6, .s7{
         animation: showFade 1s forwards;
         animation-delay: 1s;
         opacity: 0;
@@ -724,7 +724,7 @@ ul.contact {
         text-align: center;
         font-size: 12px;
         left: 217px;
-        top: -5px;
+        top: 5px;
         gap: 42px;
         animation: showFade 1s forwards;
         animation-delay: 1s;
